@@ -77,3 +77,13 @@ const arrDiesel = [];
 
 const arrOthers = [];
 
+
+for (let i = 0; i < cars.length; i++){
+    
+    let carSupply = cars.Alimentazione
+    
+    if(carSupply === `benzina`){
+        arrBenzina.push(carSupply);
+        console.log(arrBenzina);
+    }
+}
