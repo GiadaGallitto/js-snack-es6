@@ -80,11 +80,13 @@ for (let i = 0; i < zucchine.length; i++){
 
 let sum = 0;
 
+let average = 0;
+
 for(let i = 0; i < weight.length; i++){
 
     sum += weight[i];
 }
 
-console.log(weight)
+average = parseInt(sum / 10);
 
-console.log(sum)
+console.log(weight, sum, average)
