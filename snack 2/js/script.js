@@ -78,8 +78,13 @@ for (let i = 0; i < zucchine.length; i++){
     weight.push(currentZucchina.peso)
 }
 
+let sum = 0;
+
 for(let i = 0; i < weight.length; i++){
-    
+
+    sum += weight[i];
 }
 
 console.log(weight)
+
+console.log(sum)
