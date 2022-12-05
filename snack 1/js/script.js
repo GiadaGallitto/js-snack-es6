@@ -11,63 +11,63 @@ Infine stampa separatamente i 3 array.
 
 const cars = [
     {
-        Marca : `Alfa Romeo`,
-        Modello : 208,
-        Alimentazione : `benzina`
+        marca : `Alfa Romeo`,
+        modello : 208,
+        alimentazione : `benzina`
     },
 
     {
-        Marca : `Audi`,
-        Modello : 309,
-        Alimentazione : `diesel`
+        marca : `Audi`,
+        modello : 309,
+        alimentazione : `diesel`
     },
 
     {
-        Marca : `Ferrari`,
-        Modello : 505,
-        Alimentazione : `gpl`
+        marca : `Ferrari`,
+        modello : 505,
+        alimentazione : `gpl`
     },
 
     {
-        Marca : `Fiat`,
-        Modello : 107,
-        Alimentazione : `metano`
+        marca : `Fiat`,
+        modello : 107,
+        alimentazione : `metano`
     },
 
     {
-        Marca : `Hyundai`,
-        Modello : 208,
-        Alimentazione : `elettrico`
+        marca : `Hyundai`,
+        modello : 208,
+        alimentazione : `elettrico`
     },
 
     {
-        Marca : `Bmw`,
-        Modello : 602,
-        Alimentazione : `benzina`
+        marca : `Bmw`,
+        modello : 602,
+        alimentazione : `benzina`
     },
 
     {
-        Marca : `Ford`,
-        Modello : 309,
-        Alimentazione : `diesel`
+        marca : `Ford`,
+        modello : 309,
+        alimentazione : `diesel`
     },
 
     {
-        Marca : `VolsWagen`,
-        Modello : 718,
-        Alimentazione : `gpl`
+        marca : `VolsWagen`,
+        modello : 718,
+        alimentazione : `gpl`
     },
 
     {
-        Marca : `Renault`,
-        Modello : 206,
-        Alimentazione : `metano`
+        marca : `Renault`,
+        modello : 206,
+        alimentazione : `metano`
     },
 
     {
-        Marca : `Lancia`,
-        Modello : 114,
-        Alimentazione : `elettrico`
+        marca : `Lancia`,
+        modello : 114,
+        alimentazione : `elettrico`
     },
 ];
 
@@ -80,10 +80,15 @@ const arrOthers = [];
 
 for (let i = 0; i < cars.length; i++){
     
-    let carSupply = cars.Alimentazione
+    const currentAuto = cars[i]
     
-    if(carSupply === `benzina`){
-        arrBenzina.push(carSupply);
-        console.log(arrBenzina);
+    if(currentAuto.alimentazione === `benzina`){
+        arrBenzina.push(currentAuto);
+    } else if (currentAuto.alimentazione === `diesel`) {
+        arrDiesel.push(currentAuto);
+    } else {
+        arrOthers.push(currentAuto);
     }
 }
+
+console.log(arrBenzina, arrDiesel, arrOthers);
